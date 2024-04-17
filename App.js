@@ -7,34 +7,24 @@ import {
   Button,
   Pressable,
   Modal,
+  StatusBar,
 } from "react-native";
 import logoImage from "./assets/icon.png";
 import { useState } from "react";
 export default function App() {
   const [showModal, setShowModal] = useState(false);
-
+  const [showStatusBar, setShowStatusBar] = useState(false);
   return (
     <View style={{ flex: 1, backgroundColor: "plum", padding: 20 }}>
       <Button
-        title="Open Modal"
-        onPress={() => setShowModal(true)}
-        color="midnightblue"
+        title="Show status bar"
+        onPress={() => setShowStatusBar(!showStatusBar)}
       />
-      <Modal
-        visible={showModal}
-        onRequestClose={() => setShowModal(false)}
-        animationType="slide"
-        // presentationStyle="pageSheet"   only for ios
-      >
-        <View style={{ flex: 1, backgroundColor: "lightblue", padding: 20 }}>
-          <Text>Modal content</Text>
-          <Button
-            title="Close Modal"
-            color="midnightblue"
-            onPress={() => setShowModal(false)}
-          />
-        </View>
-      </Modal>
+      <StatusBar
+        backgroundColor="lightgreen"
+        barStyle="dark-content"
+        hidden={showStatusBar}
+      />
     </View>
   );
 }
