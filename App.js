@@ -2,6 +2,12 @@ import { View, Text, StyleSheet } from "react-native";
 export default function App() {
   return (
     <View style={styles.container}>
+      <View style={styles.darkMode}>
+        <Text style={styles.darkModeText}>
+          Style Inheritance
+          <Text style={styles.boldText}>In Bold</Text>
+        </Text>
+      </View>
       <View style={[styles.box, styles.lightblueBg, styles.boxShadow]}>
         {/* The last element in the array gets the highest precedence */}
         <Text>Lightblue box</Text>
@@ -56,5 +62,17 @@ const styles = StyleSheet.create({
   androidShadow: {
     elevation: 10,
     shadowColor: "red",
+  },
+
+  // Style Inheritance
+  darkMode: {
+    backgroundColor: "black",
+    // color: "white",  Doesn't work as inheritance from view to text is not supported
+  },
+  darkModeText: {
+    color: "white",
+  },
+  boldText: {
+    fontWeight: "bold", // However inheritance within text element is supported
   },
 });
