@@ -13,29 +13,6 @@ export default function App() {
   );
 }
 
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     backgroundColor: "plum",
-//     alignItems: "center",
-//     justifyContent: "center",
-//   },
-//   lightblueBox: {
-//     width: 100,
-//     height: 100,
-//     padding: 10,
-//     backgroundColor: "lightblue",
-//   },
-//   lightgreenBox: {
-//     width: 100,
-//     height: 100,
-//     padding: 10,
-//     backgroundColor: "lightgreen",
-//   },
-// });
-
-//Refactor the code
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -44,10 +21,19 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   box: {
-    width: 100,
-    height: 100,
-    padding: 10,
+    width: "25%",
+    height: "25%",
+    // padding: 10,
+    paddingHorizontal: 10,
+    paddingVertical: 40,
+    marginVertical: 10,
+    marginHorizontal: 40,
+    borderWidth: 2,
+    borderColor: "purple",
+    borderRadius: 24,
+    // Border radius cannot be applied for TExt in IOS but in android it's possible
   },
+
   lightblueBg: {
     backgroundColor: "lightblue",
   },
