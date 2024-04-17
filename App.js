@@ -9,6 +9,7 @@ import {
   Modal,
   StatusBar,
   ActivityIndicator,
+  Alert,
 } from "react-native";
 import logoImage from "./assets/icon.png";
 import { useState } from "react";
@@ -17,13 +18,23 @@ export default function App() {
   const [showStatusBar, setShowStatusBar] = useState(false);
   return (
     <View style={{ flex: 1, backgroundColor: "plum", padding: 20 }}>
-      <ActivityIndicator />
-      <ActivityIndicator size={"large"} />
-      <ActivityIndicator size={"large"} color={"midnightblue"} />
-      <ActivityIndicator
-        size={"large"}
-        color={"midnightblue"}
-        animating={false}
+      <Button title="Alert" onPress={() => Alert.alert("Invalid Data")} />
+      <Button
+        title="Alert 2"
+        onPress={() => Alert.alert("Invalid Data", "DOB is not valid")}
+      />
+      <Button
+        title="Alert 3"
+        onPress={() =>
+          Alert.alert("Invalid Data", "DOB is not valid", [
+            {
+              text: "Cancel",
+              onPress: () => console.log("Cancel Pressed"),
+              style: "cancel",
+            },
+            { text: "OK", onPress: () => console.log("OK Pressed") },
+          ])
+        }
       />
     </View>
   );
