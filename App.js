@@ -2,11 +2,11 @@ import { View, Text, StyleSheet } from "react-native";
 export default function App() {
   return (
     <View style={styles.container}>
-      <View style={[styles.box, styles.lightblueBg]}>
+      <View style={[styles.box, styles.lightblueBg, styles.boxShadow]}>
         {/* The last element in the array gets the highest precedence */}
         <Text>Lightblue box</Text>
       </View>
-      <View style={[styles.box, styles.lightgreenBg]}>
+      <View style={[styles.box, styles.lightgreenBg, styles.androidShadow]}>
         <Text>Lightgreen box</Text>
       </View>
     </View>
@@ -21,8 +21,8 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   box: {
-    width: "25%",
-    height: "25%",
+    width: 250,
+    height: 250,
     // padding: 10,
     paddingHorizontal: 10,
     paddingVertical: 40,
@@ -39,5 +39,22 @@ const styles = StyleSheet.create({
   },
   lightgreenBg: {
     backgroundColor: "lightgreen",
+  },
+
+  // applicable for ios
+  boxShadow: {
+    shadowColor: "#333333",
+    shadowOffset: {
+      width: 6,
+      height: 6,
+    },
+    shadowOpacity: 0.6,
+    shadowRadius: 4,
+  },
+
+  // applicable for android
+  androidShadow: {
+    elevation: 10,
+    shadowColor: "red",
   },
 });
