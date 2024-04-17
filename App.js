@@ -8,6 +8,7 @@ import {
   Pressable,
   Modal,
   StatusBar,
+  ActivityIndicator,
 } from "react-native";
 import logoImage from "./assets/icon.png";
 import { useState } from "react";
@@ -16,14 +17,13 @@ export default function App() {
   const [showStatusBar, setShowStatusBar] = useState(false);
   return (
     <View style={{ flex: 1, backgroundColor: "plum", padding: 20 }}>
-      <Button
-        title="Show status bar"
-        onPress={() => setShowStatusBar(!showStatusBar)}
-      />
-      <StatusBar
-        backgroundColor="lightgreen"
-        barStyle="dark-content"
-        hidden={showStatusBar}
+      <ActivityIndicator />
+      <ActivityIndicator size={"large"} />
+      <ActivityIndicator size={"large"} color={"midnightblue"} />
+      <ActivityIndicator
+        size={"large"}
+        color={"midnightblue"}
+        animating={false}
       />
     </View>
   );
