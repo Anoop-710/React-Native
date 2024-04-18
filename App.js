@@ -19,10 +19,8 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1, // takes up all the space on the device
-    // flexDirection: "row",
-    justifyContent: "center",
-    // justifyContent: "center", justifyContent: "flex-start", justifyContent: "flex-end", justifyContent: "space-between", justifyContent: "space-around", justifyContent: "space-evenly",
-    marginTop: 24,
+    alignItems: "center",
+    // alignItems: "center", alignItems: "stretch", alignItems: "flex-start", alignItems: "flex-end", alignItems: "baseline",
     borderWidth: 8,
     borderColor: "lightgreen",
     borderRadius: 8,
