@@ -16,15 +16,14 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
-    // flexWrap: "wrap", flexWrap: "nowrap", flexWrap: "wrap-reverse",
     flexWrap: "wrap",
+    alignContent: "space-between",
+    // There should be more than 1 col or row for alignContent to work
+    // alignContent: "flex-start", alignContent: "flex-end", alignContent: "center", alignContent: "space-between", alignContent: "space-around", alignContent: "space-evenly",
     height: 300,
     borderWidth: 6,
     borderColor: "lightgreen",
     borderRadius: 8,
     marginTop: 64,
-    // flex: 1,
-    // flexDirection: "row",
-    // flexWrap: "wrap-reverse",
   },
 });
