@@ -13,6 +13,8 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     padding: 20,
     flexGrow: 1,
+    width: 100,
+    height: 100,
   },
   text: {
     fontSize: 24,
